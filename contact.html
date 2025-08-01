@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Janki Temple | Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #faf7f0 60%, #f1d1c1 100%);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #6b1d1d;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 1.5px;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      background: #f1d1c1;
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    nav a {
+      color: #6b1d1d;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover,
+    nav a.active {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+    }
+    main {
+      max-width: 700px;
+      margin: 130px auto 60px;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #6b1d1d;
+      margin-bottom: 1.2rem;
+      border-bottom: 3px solid #f1d1c1;
+      padding-bottom: 0.5rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .contact-info {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      padding: 1.7rem 2rem 1.2rem 2rem;
+      margin-bottom: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      font-size: 1.13rem;
+      border-left: 5px solid #6b1d1d;
+      position: relative;
+    }
+    .contact-info strong {
+      color: #6b1d1d;
+      font-weight: 700;
+    }
+    .contact-info a {
+      color: #1d6b43;
+      text-decoration: underline;
+      word-break: break-all;
+      transition: color 0.2s;
+    }
+    .contact-info a:hover {
+      color: #843636;
+    }
+    .map-container {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.10);
+      border: 2px solid #f1d1c1;
+    }
+    form {
+      background: #fff;
+      padding: 2.2rem 2rem 1.5rem 2rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #6b1d1d;
+      letter-spacing: 0.5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.85rem;
+      margin-top: 0.3rem;
+      border: 1.5px solid #ccc;
+      border-radius: 7px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      resize: vertical;
+      background: #faf7f0;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #6b1d1d;
+      outline: none;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    button {
+      margin-top: 2rem;
+      width: 100%;
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    button:hover {
+      background-color: #843636;
+      color: #fff;
+    }
+    footer {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 -2px 8px rgba(107,29,29,0.08);
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 700px) {
+      main {
+        margin: 110px 0.5rem 40px;
+      }
+      .contact-info, form {
+        padding: 1.1rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+      }
+      nav {
+        gap: 1rem;
+        padding: 0.5rem 0.5rem;
+      }
+      main {
+        margin: 90px 0.2rem 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Janki Temple</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div><strong>Location:</strong> Janaki Temple, Janakpur 45600, Nepal</div>
+      <div><strong>Temple Timings:</strong> 5:00 AM – 12:00 PM, 4:00 PM – 9:00 PM</div>
+      <div><strong>Contact:</strong> <a href="tel:+97741520006">+977-41-520006</a></div>
+      <div><strong>Email:</strong> <a href="mailto:info@janakitemple.org">info@janakitemple.org</a></div>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=Janaki+Temple,+Janakpur,+Nepal&output=embed"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <form action="#" method="post" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Janki Temple Trust | Crafted with devotion
+  </footer>
+</body>
+</html>

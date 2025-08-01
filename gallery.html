@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Janki Temple | Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #faf7f0 60%, #f1d1c1 100%);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #6b1d1d;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 1.5px;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      background: #f1d1c1;
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    nav a {
+      color: #6b1d1d;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover,
+    nav a.active {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+    }
+    main {
+      max-width: 1200px;
+      margin: 130px auto 60px;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 2.3rem;
+      color: #6b1d1d;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #f1d1c1;
+      padding-bottom: 0.5rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(107,29,29,0.10);
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1.5px solid #f1d1c1;
+    }
+    .gallery-item:hover {
+      box-shadow: 0 8px 32px rgba(107,29,29,0.18);
+      transform: translateY(-6px) scale(1.03);
+      border-color: #6b1d1d;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px 16px 0 0;
+      background: #fff;
+      transition: transform 0.3s;
+    }
+    .caption {
+      text-align: center;
+      font-size: 1.08rem;
+      color: #6b1d1d;
+      margin: 1rem 0 1.2rem 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      padding: 0 1rem;
+    }
+    footer {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 -2px 8px rgba(107,29,29,0.08);
+    }
+    @media (max-width: 900px) {
+      main {
+        margin: 110px auto 40px;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .gallery-grid img {
+        height: 150px;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+      }
+      nav {
+        gap: 1rem;
+        padding: 0.5rem 0.5rem;
+      }
+      main {
+        margin: 90px 0.2rem 30px;
+      }
+      .gallery-grid img {
+        height: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Janki Temple</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="f.jpg" alt="Janki Temple front view" />
+        <div class="caption">Temple Front View</div>
+      </div>
+      <div class="gallery-item">
+        <img src="d.jpg" alt="Temple interior decorations" />
+        <div class="caption">Interior Decorations</div>
+      </div>
+      <div class="gallery-item">
+        <img src="fe.jpg" alt="Festivals at Janki Temple" />
+        <div class="caption">Festivals at Temple</div>
+      </div>
+      <div class="gallery-item">
+        <img src="de.jpg" alt="Devotees praying" />
+        <div class="caption">Devotees Praying</div>
+      </div>
+      <div class="gallery-item">
+        <img src="du.jpg" alt="Temple at dusk" />
+        <div class="caption">Temple at Dusk</div>
+      </div>
+      <div class="gallery-item">
+        <img src="su.jpg" alt="Temple sculptures" />
+        <div class="caption">Temple Sculptures</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Janki Temple Trust | Crafted with devotion
+  </footer>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Janki Temple | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #faf7f0 60%, #f1d1c1 100%);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #6b1d1d;
+      color: #fff;
+      padding: 0.7rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-logo {
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      border: 2px solid #f1d1c1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      background: #f1d1c1;
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    nav a {
+      color: #6b1d1d;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 1rem;
+    }
+    nav a:hover,
+    nav a.active {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+    }
+    main {
+      max-width: 1100px;
+      margin: 120px auto 60px;
+      padding: 0 1rem;
+    }
+    .intro {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Merriweather', serif;
+      font-size: 3vw;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .intro video {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .intro::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(107,29,29,0.45);
+      z-index: 1;
+    }
+    .intro span {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 3vw;
+      font-size: 3vw;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      background: rgba(107,29,29,0.18);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(107,29,29,0.10);
+    }
+    section {
+      margin-top: 2.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(107,29,29,0.07);
+      padding: 2rem 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+    section:hover {
+      box-shadow: 0 6px 24px rgba(107,29,29,0.13);
+    }
+    h2 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #6b1d1d;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #f1d1c1;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.13rem;
+      color: #4b4b4b;
+      max-width: 900px;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.7rem 1.5rem;
+      background: #6b1d1d;
+      color: #f1d1c1;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    .btn:hover {
+      background: #f1d1c1;
+      color: #6b1d1d;
+    }
+    footer {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 -2px 8px rgba(107,29,29,0.08);
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        max-width: 98vw;
+      }
+      .intro {
+        font-size: 2rem;
+        height: 60vh;
+      }
+      .intro span {
+        font-size: 4vw;
+      }
+      nav {
+        gap: 1rem;
+        padding: 0.5rem 0.7rem;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+      }
+      .header-left {
+        margin-bottom: 0.5rem;
+      }
+      header h1 {
+        font-size: 1.2rem;
+      }
+      nav {
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        padding: 0.5rem 0.5rem;
+      }
+      .intro {
+        font-size: 1.1rem;
+        height: 40vh;
+        margin-bottom: 1.2rem;
+      }
+      .intro span {
+        font-size: 6vw;
+      }
+      section {
+        margin-top: 1.2rem;
+        padding: 0.8rem 0.3rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <!-- Optional logo: replace logo.png with your logo file or remove the img tag if not needed -->
+      <img src="logo.png" alt="Janki Temple Logo" class="header-logo" />
+      <h1>Janki Temple</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="intro">
+    <video src="janki.mp4" autoplay loop muted playsinline></video>
+    <span>Welcome to Janki Temple in Janakpur, Nepal</span>
+  </div>
+
+  <main>
+    <section>
+      <h2>Welcome to Janki Temple</h2>
+      <p>
+       Janki Temple, located in the heart of Janakpur, Nepal, is one of the most revered pilgrimage sites dedicated to Goddess Sita, also known as Janki. 
+       Rich in history and spiritual significance, it welcomes thousands of devotees from across the world.
+      </p>
+      <a href="about.html" class="btn">Learn More</a>
+    </section>
+
+    <section>
+      <h2>Our Mission</h2>
+      <p>
+        We aim to preserve and promote the heritage of the temple, foster devotion, and provide a peaceful environment for worship and cultural exchange.
+      </p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Janki Temple Trust | Crafted with devotion
+  </footer>
+</body>
+</html>

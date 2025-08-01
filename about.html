@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Janki Temple | About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #faf7f0 60%, #f1d1c1 100%);
+      color: #333;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #6b1d1d;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 1.5px;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      background: #f1d1c1;
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(107,29,29,0.08);
+    }
+    nav a {
+      color: #6b1d1d;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover,
+    nav a.active {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+    }
+    .intro {
+      background: url('janakpur.jpg') no-repeat center/cover;
+      height: 340px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      font-family: 'Merriweather', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 1rem;
+      margin: 100px 1rem 2.5rem 1rem;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(107,29,29,0.10);
+      overflow: hidden;
+    }
+    .intro::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(107,29,29,0.35);
+      border-radius: 16px;
+      z-index: 1;
+    }
+    .intro span {
+      position: relative;
+      z-index: 2;
+    }
+    main {
+      max-width: 950px;
+      margin: 0 auto 60px;
+      padding: 0 1rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(107,29,29,0.07);
+    }
+    h2 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #6b1d1d;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #f1d1c1;
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+    }
+    p {
+      font-size: 1.13rem;
+      color: #4b4b4b;
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+    .about-img {
+      float: left;
+      margin-right: 24px;
+      margin-bottom: 12px;
+      width: 210px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(107,29,29,0.10);
+      border: 2px solid #f1d1c1;
+    }
+    .about-img-large {
+      float: left;
+      margin-right: 32px;
+      margin-bottom: 12px;
+      width: 300px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(107,29,29,0.10);
+      border: 2px solid #f1d1c1;
+    }
+    @media (max-width: 900px) {
+      main {
+        padding: 0.5rem;
+      }
+      .intro {
+        font-size: 1.3rem;
+        height: 180px;
+        margin: 90px 0.5rem 1.5rem 0.5rem;
+      }
+      .about-img, .about-img-large {
+        float: none;
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 90%;
+        max-width: 320px;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+      }
+      nav {
+        gap: 1rem;
+        padding: 0.5rem 0.5rem;
+      }
+      .intro {
+        font-size: 1.1rem;
+        height: 100px;
+        margin: 70px 0.2rem 1rem 0.2rem;
+      }
+      main {
+        margin: 0 0.2rem 30px;
+        border-radius: 8px;
+      }
+    }
+    footer {
+      background-color: #6b1d1d;
+      color: #f1d1c1;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 -2px 8px rgba(107,29,29,0.08);
+      letter-spacing: 0.5px;
+    }
+    /* Clearfix for floated images */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Janki Temple</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="intro">
+    <span>Welcome to the Sacred Janki Temple</span>
+  </section>
+  <main>
+    <h2>History of Janki Temple</h2>
+    <p>
+      Janki Temple, also known as Janaki Mandir, is a revered Hindu temple located in Janakpur, Nepal. It is dedicated to Goddess Sita, who is worshipped as an incarnation of Goddess Lakshmi and the consort of Lord Rama. 
+      The temple is believed to stand on the exact spot where Sita was born and later discovered by King Janak while ploughing a field, as described in the epic Ramayana.
+    </p>
+    <p>
+      The current structure of the temple was built in 1910 by Queen Vrisha Bhanu of Tikamgarh (Madhya Pradesh, India). Inspired by a dream in which Goddess Sita urged her to construct the shrine, the queen commissioned the temple using a unique blend of Mughal and Maithil architectural styles. The white-marble structure with domes, 
+      intricate lattice work, and colorful stained glass windows makes Janaki Mandir one of the finest examples of Hindu-Rajput architecture in Nepal.
+    </p>
+    <p>
+      Historically, the site has been a major center of faith and pilgrimage for centuries, long before the present-day temple was constructed. 
+      Pilgrims from Nepal, India, and other parts of the world visit the temple, especially during festivals like Vivaha Panchami—the celebration of the divine wedding of Sita and Rama.
+      The temple's archives and oral traditions suggest that Janakpur has been a sacred city for thousands of years, tied deeply to Vedic and Ramayanic history.
+    </p>
+    <p>
+      Today, Janki Temple stands not only as a place of worship but also as a cultural and historical symbol of devotion, resilience, and divine love. It plays a significant role in preserving the spiritual heritage of Mithila and continues to be a source of inspiration for generations. 
+      Through daily rituals, educational programs, and festive celebrations, the temple remains a living monument to the legacy of Goddess Sita.
+    </p>
+
+    <h2>Goddess Sita</h2>
+    <div class="clearfix">
+      <img src="s.jpg" alt="Goddess Sita" class="about-img" />
+      <p>
+        Goddess Sita, also revered as Mata Sita, is a central figure in the ancient Indian epic, the Ramayana.
+        She is worshipped as an incarnation of Goddess Lakshmi, the consort of Lord Vishnu, and is best known as the devoted wife of Lord Rama. 
+        Her character represents purity, selflessness, and unwavering strength.
+      </p>
+      <p>
+        Born in Janakpur, Nepal, Goddess Sita is believed to have emerged from the earth, symbolizing her divine origin and connection to nature.
+        Raised by King Janak, she is celebrated not only for her beauty and grace but also for her deep wisdom, moral courage, and commitment to dharma (righteousness).
+      </p>
+      <p>
+        Throughout history, Sita has been a symbol of ideal womanhood and spiritual resilience. Her life’s journey—marked by exile, trials,
+        and sacrifice—continues to inspire devotion and reverence among millions. 
+        Temples dedicated to her, such as the Janki Temple in Janakpur, honor her legacy and divine virtues.
+      </p>
+    </div>
+
+    <h2>One of the most famous festivals celebrated at the Janki Temple is Vivaha Panchami</h2>
+    <div class="clearfix">
+      <img src="v.jpg" alt="One of the most famous festivals celebrated at the Janki Temple is Vivaha Panchami " class="about-img-large" />
+      <p>
+        Vivaha Panchami is a major Hindu festival celebrated with great devotion in Janakpur, Nepal, to commemorate the divine marriage of Lord Rama and Goddess Sita. According to the Ramayana, this auspicious event took place in the city of Janakpur, the ancient capital of King Janak, where Sita was born and raised. The festival falls on the fifth day of the waxing moon 
+        in the Hindu month of Margashirsha (November–December), and it draws thousands of devotees from Nepal and India every year.
+      </p>
+      <p>
+        The celebration is centered around the Janaki Temple, where elaborate rituals, processions, and reenactments of the wedding ceremony take place. Idols of Rama and Sita are carried through the streets in beautifully decorated palanquins, accompanied by priests, musicians, and dancers. The entire city comes alive with color, devotion, and joy as 
+        people gather to witness the symbolic marriage ceremony held in front of the temple, reenacting the ancient union of the divine couple.
+      </p>
+      <p>
+        Vivaha Panchami is not only a religious observance but also a cultural festival that strengthens the historical and spiritual bond between India and Nepal. For devotees, participating in the celebrations at Janakpur is considered a once-in-a-lifetime blessing, symbolizing faith, divine love, and adherence to dharma. 
+        The festival continues to preserve and honor the timeless legacy of Lord Rama and Goddess Sita, keeping their story alive through devotion and tradition.
+      </p>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Janki Temple Trust | Crafted with devotion
+  </footer>
+</body>
+</html>
